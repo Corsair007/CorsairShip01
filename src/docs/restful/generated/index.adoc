@@ -1,0 +1,117 @@
+= API Test  
+
+
+[[_overview]]
+== Overview
+MyAPITest Description
+
+
+=== Version information
+[%hardbreaks]
+_Version_ : 1.0.0
+
+
+=== Contact information
+[%hardbreaks]
+_Contact_ : haoyifen
+_Contact Email_ : haoyifen@yy.com
+
+
+=== License information
+[%hardbreaks]
+_License_ : Apache 2.0
+_License URL_ : http://www.apache.org/licenses/LICENSE-2.0.html
+
+
+=== URI scheme
+[%hardbreaks]
+_Host_ : localhost
+_BasePath_ : /
+
+
+=== Tags
+
+* user-controller : User Controller
+
+
+
+
+[[_paths]]
+== Paths
+
+[[_queryuserbyidusingget]]
+=== 根据用户id查询用户信息
+....
+GET /user/queryUserById{?userId}
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4,.^2"]
+|===
+|Type|Name|Description|Schema|Default
+|*Query*|*userId* +
+_required_|用户Id|integer(int32)|
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|*200*|OK|<<_result,Result>>
+|*500*|500 message|<<_error,Error>>
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `application/json`
+
+
+==== Tags
+
+* user-controller
+
+
+
+
+[[_definitions]]
+== Definitions
+
+[[_result]]
+=== Result
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|Name|Description|Schema
+|*code* +
+_optional_||integer(int32)
+|*data* +
+_optional_||object
+|*message* +
+_optional_||string
+|===
+
+
+
+
+[[_securityscheme]]
+== Security
+
+[[_http-access-token]]
+=== HTTP-ACCESS-TOKEN
+[%hardbreaks]
+_Type_ : apiKey
+_Name_ : HTTP-ACCESS-TOKEN
+_In_ : HEADER
+
+
+
